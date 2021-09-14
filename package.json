@@ -1,0 +1,26 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "team generator homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelley-mcd/Team-Profile-Generator.git"
+  },
+  "author": "kmcdonnell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kelley-mcd/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/kelley-mcd/Team-Profile-Generator#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.1.2"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
