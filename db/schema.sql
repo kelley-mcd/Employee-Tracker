@@ -4,14 +4,15 @@ CREATE DATABASE EMPLOYEE_db;
 USE EMPLOYEE_db;
 
 CREATE TABLE deaprtment (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT NOT NULL PRIMARY KEY,
   naame VARCHAR(30) NOT NULL
 );
 
-CREATE TABLE rolee (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE role (
+    id INT NOT NULL PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
     salary DECIMAL,
+    manager VARCHAR(30) NOT NULL,
     department_id INT,
     FOREIGN KEY (department_id)
     REFERENCES department(id)
@@ -19,17 +20,12 @@ CREATE TABLE rolee (
 );
 
 CREATE TABLE employee (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT NOT NULL PRIMARY KEY,
   first_name VARCHAR(30) NOT NULL,
   last_name VARCHAR(30) NOT NULL,
 
-  rolee_id INT,
-  FOREIGN KEY (rolee_id)
-  REFERENCES rolee(id)
-  ON DELETE SET NULL
-
-  manager_id INT,
-  FOREIGN KEY (manager_id)
-  REFERENCES manager(id)
+  role_id INT,
+  FOREIGN KEY (role_id)
+  REFERENCES role(id)
   ON DELETE SET NULL
 )
