@@ -17,4 +17,12 @@ const db = mysql.createConnection(
     console.table('connected to EMPLOYEE_db database.')
 );
 
+app.use((req, res) => {
+    res.status(404).end();
+});
+
+app.listen(PORT, () => {
+    console.table(`server running on port ${PORT}`);
+})
+
 
