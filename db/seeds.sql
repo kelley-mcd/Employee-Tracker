@@ -1,10 +1,10 @@
-INSERT INTO deaprtment (id, naame)
+INSERT INTO department (id, name)
 VALUES (1, "Tech Dept"),
        (2, "Finance Dept"),
        (3, "HR Dept"),
        (4, "Law Dept");
 
-INSERT INTO rolee (id, title, salary)
+INSERT INTO role (id, title, salary)
 VALUES (1, "Techee", 123.000),
        (2, "Finance Dude", 456.000),
        (3, "HR Lady", 789.000),
